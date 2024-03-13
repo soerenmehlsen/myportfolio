@@ -1,0 +1,48 @@
+.mobile-menu {
+  display: none; /* Hide the mobile items by default */
+  width: 100vw; /* Set the width to 100% */
+  height: 100vh; /* Set the height to 100% */
+  position: fixed; /* Set the position to fixed */
+  left: 0; /* Set the left to 0 */
+  top: 0; /* Set the top to 0 */
+  /*z-index: 999; /* Set the z-index to 999 */
+  opacity: 0%; /* Set the opacity to 0 */
+  background-color: beige; /* Set the background color */
+  transition: all 0.3s ease; /* Add a transition to the items */
+  /*transform: translateX(-100vw); /* Set the transform to translateX(-100%) */
+}
+
+/* The items have to be centeret in the middle of the page*/
+.mobile-menu-items {
+  width: 60vw; /* Set the width to 60% */
+  height: 100vh; /* Set the height to 100% */
+  padding: 2rem; /* Add some padding */
+  align-items: center; /* Center the items vertically */
+}
+
+.mobile-menu-items a {
+  text-decoration: none; /* Remove the underline from the links */
+  color: #000; /* Set the color of the links */
+  font-style: sans-serif; /* Set the font style to sans-serif */
+  font-weight: 200; /* Set the font weight of the links */
+  opacity: 0.5; /* Set the opacity to 0.5 */
+}
+
+.mobile-menu.active {
+  opacity: 1; /* Set the opacity to 1 */
+  transform: translateX(0); /* Set the transform to translateX(0) */
+}
+
+.mobile-menu ul {
+  display: flex; /* Display the items as a flex container */
+  flex-direction: column; /* Set the direction to column */
+  gap: 2rem; /* Add some gap between the items */
+  list-style: none; /* Remove the bullet points from the list */
+  margin-left: -2rem; /* Add some margin to the left */
+}
+
+@media (max-width: 768px) {
+  .mobile-menu {
+    display: block; /* Display the mobile items */
+  }
+}

@@ -1,107 +1,123 @@
 .navbar {
-    background-color: white; /* Set the background color */
-    padding: 0.5rem 0; /* Add some padding to the top and bottom */
-    position: sticky; /* This is the key to the navbar sticking to the top of the page */
-    top: 0; /* Stick to the top */
-    z-index: 30; /* Set the z-index to make sure the navbar is on top of everything */
-    backdrop-filter: blur(50px); /* Add a backdrop filter to the navbar */
+  background-color: white; /* Set the background color */
+  padding: 0.5rem 0; /* Add some padding to the top and bottom */
+  position: sticky; /* This is the key to the navbar sticking to the top of the page */
+  top: 0; /* Stick to the top */
+  z-index: 30; /* Set the z-index to make sure the navbar is on top of everything */
+  backdrop-filter: blur(50px); /* Add a backdrop filter to the navbar */
 }
 
 .navbar-container {
-    display: flex; /* Use flexbox to align the items */
-    justify-content: space-between; /* Space the items out */
-    align-items: center; /* Center the items vertically */
-    max-width: 1300px; /* Set the max width of the container */
-    margin: 0 auto; /* Center the container */
-    padding: 1rem 0; /* Add some padding to the left and right */
+  display: flex; /* Use flexbox to align the items */
+  justify-content: space-between; /* Space the items out */
+  align-items: center; /* Center the items vertically */
+  max-width: 1300px; /* Set the max width of the container */
+  margin: 0 auto; /* Center the container */
+  padding: 1rem 0; /* Add some padding to the left and right */
 }
 
 .navbar-logo {
-    color: #000; /* Set the color of the logo */
-    font-size: 20px; /* Set the font size of the logo */
-    font-weight: 600; /* Set the font weight of the logo */
-    text-decoration: none; /* Remove the underline from the logo */
-    width: 12rem; /* Set the width of the logo */
-    height: auto; /* Set the height to auto */
-    font-style: sans-serif; /* Set the font style to sans-serif */
-    margin-left: 1rem; /* Add some margin to the left */
+  color: #000; /* Set the color of the logo */
+  font-size: 20px; /* Set the font size of the logo */
+  font-weight: 600; /* Set the font weight of the logo */
+  text-decoration: none; /* Remove the underline from the logo */
+  width: 12rem; /* Set the width of the logo */
+  height: auto; /* Set the height to auto */
+  font-style: sans-serif; /* Set the font style to sans-serif */
+  /*margin-left: 1rem; /* Add some margin to the left */
 }
 
 .navbar-container ul {
-    display: flex; /* Use flexbox to align the items */
-    list-style: none; /* Remove the bullet points from the list */
-    align-items: center; /* Center the items vertically */
-    gap: 0.5rem; /* Add some space between the items */
+  display: flex; /* Use flexbox to align the items */
+  list-style: none; /* Remove the bullet points from the list */
+  align-items: center; /* Center the items vertically */
+  gap: 0.5rem; /* Add some space between the items */
 }
 
 .navbar-container li {
-    padding: 0.5rem 1rem; /* Add some padding to the left and right */
-    border-radius: 5px; /* Add some border radius to the items */
-    transition: all 0.3s ease; /* Add a transition to the items */
+  padding: 0.5rem 1rem; /* Add some padding to the left and right */
+  border-radius: 5px; /* Add some border radius to the items */
+  transition: all 0.3s ease; /* Add a transition to the items */
 }
 
 .nav-item a {
-    text-decoration: none; /* Remove the underline from the links */
-    color: #000; /* Set the color of the links */
-    font-style: sans-serif; /* Set the font style to sans-serif */ 
-    font-weight: 200; /* Set the font weight of the links */
-    position: relative; /* Set the position to relative */
-    cursor: pointer; /* Set the cursor to pointer */
-    opacity: 0.5; /* Set the opacity to 0.5 */
-    transition: all 0.3s ease; /* Smoothly transition the items */
+  text-decoration: none; /* Remove the underline from the links */
+  color: #000; /* Set the color of the links */
+  font-style: sans-serif; /* Set the font style to sans-serif */
+  font-weight: 200; /* Set the font weight of the links */
+  position: relative; /* Set the position to relative */
+  cursor: pointer; /* Set the cursor to pointer */
+  opacity: 0.5; /* Set the opacity to 0.5 */
+  transition: all 0.3s ease; /* Smoothly transition the items */
 }
 
 .nav-item a:hover {
-    opacity: 1; /* Set the opacity to 1 */
+  opacity: 1; /* Set the opacity to 1 */
 }
 
 .nav-item a.active {
-    opacity: 1; /* Set the opacity to 1 */
+  opacity: 1; /* Set the opacity to 1 */
 }
 
 /* Add a hover effect to the items */
 .nav-item a::before {
-    content: ""; /* Add some content */
-    position: absolute; /* Set the position to absolute */
-    width: 100%; /* Set the width to 100% */
-    height: 2px; /* Set the height to 2px */
-    bottom: 0; /* Set the bottom to 0 */
-    left: 0; /* Set the left to 0 */
-    /*background-color: #000; /* Set the background color */
-    background: linear-gradient(90deg, #f45a18, #e29e5a); /* Add a gradient to the background */
-    visibility: hidden; /* Set the visibility to hidden */
-    transform: scaleX(0); /* Set the scale to 0 */
-    transition: all 0.3s ease; /* Add a transition to the items */
+  content: ""; /* Add some content */
+  position: absolute; /* Set the position to absolute */
+  width: 100%; /* Set the width to 100% */
+  height: 2px; /* Set the height to 2px */
+  bottom: 0; /* Set the bottom to 0 */
+  left: 0; /* Set the left to 0 */
+  background: linear-gradient(
+    90deg,
+    #f45a18,
+    #e29e5a
+  ); /* Add a gradient to the background */
+  visibility: hidden; /* Set the visibility to hidden */
+  transform: scaleX(0); /* Set the scale to 0 */
+  transition: all 0.3s ease; /* Add a transition to the items */
 }
 
 .nav-item a:hover::before {
-    visibility: visible; /* Set the visibility to visible */
-    transform: scaleX(1); /* Set the scale to 1 */
-    opacity: 1; /* Set the opacity to 1 */
+  visibility: visible; /* Set the visibility to visible */
+  transform: scaleX(1); /* Set the scale to 1 */
+  opacity: 1; /* Set the opacity to 1 */
 }
 
 .menu-btn {
-    display: none; /* Hide the menu button by default */
-    width: 2.5rem; /* Set the width of the menu button */
-    height: 2.5rem; /* Set the height of the menu button */
-    font-size: 1.5rem; /* Set the font size of the menu button */
-    align-items: center; /* Center the items vertically */
-    justify-content: center; /* Center the items horizontally */
-    border: none; /* Remove the border from the menu button */
-    border-radius: 0.4rem; /* Add some border radius to the menu button */
-    line-height: 0; /* Set the line height to 0 */
-    cursor: pointer; /* Set the cursor to pointer */
-    transition: all 0.3s ease; /* Add a transition to the items */
-    background: white; /* Set the background color */
-    margin-right: 1rem; /* Add some margin to the right */
+  display: none; /* Hide the menu button by default */
+  width: 2.5rem; /* Set the width of the menu button */
+  height: 2.5rem; /* Set the height of the menu button */
+  font-size: 1.5rem; /* Set the font size of the menu button */
+  align-items: center; /* Center the items vertically */
+  justify-content: center; /* Center the items horizontally */
+  border: none; /* Remove the border from the menu button */
+  border-radius: 0.4rem; /* Add some border radius to the menu button */
+  line-height: 0; /* Set the line height to 0 */
+  cursor: pointer; /* Set the cursor to pointer */
+  transition: all 0.3s ease; /* Add a transition to the items */
+  background: white; /* Set the background color */
+  /*margin-right: 1rem; /* Add some margin to the right */
 }
 
+/* Viewport width is 768px or less */
 @media (max-width: 768px) {
-    .menu-btn {
-        display: block; /* Show the menu button */
-    }
-    .navbar-container ul {
-        display: none; /* Hide the navbar container */
-    }
+  .menu-btn {
+    display: block; /* Show the menu button */
+  }
+  .navbar-container ul {
+    display: none; /* Hide the navbar container */
+  }
+  .navbar-container {
+    padding: 0 1rem; /* Add some padding to the left and right */
+  }
+  .navbar-logo {
+    display: none; /* Set the width of the logo */
+  }
 }
 
+/* Viewport width is 768px or more */
+@media (min-width: 768px) {
+  .navbar-container {
+    padding: 0 2rem; /* Add some padding to the left and right */
+  }
+}
