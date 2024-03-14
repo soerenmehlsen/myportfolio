@@ -3,18 +3,14 @@ import "./Navbar.css";
 import "material-symbols";
 import { useState } from "react";
 import MobileNav from "./MobileNav/MobileNav";
-import DehazeOutlinedIcon from "@mui/icons-material/DehazeOutlined";
-import ClearOutlinedIcon from "@mui/icons-material/ClearOutlined";
+import { Twirl as Hamburger } from "hamburger-react";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false); // This is the state that will be used to toggle the mobile menu
 
-  const toggleMenu = () => {
-    setOpenMenu(!openMenu);
-  }; // This function will be used to toggle the mobile menu
   return (
     <>
-      <MobileNav isOpen={openMenu} toggleMenu={toggleMenu} />
+      <MobileNav isOpen={openMenu} toggleMenu={() => setOpenMenu(!openMenu)} />
       <nav className="navbar">
         <div className="navbar-container">
           <a href="/" className="navbar-logo">
@@ -46,13 +42,7 @@ const Navbar = () => {
               </a>
             </li>
           </ul>
-          <button className="menu-btn" onClick={toggleMenu}>
-            {openMenu ? (
-              <ClearOutlinedIcon style={{ fontSize: "1.8rem" }} />
-            ) : (
-              <DehazeOutlinedIcon style={{ fontSize: "1.8rem" }} />
-            )}
-          </button>
+          <Hamburger toggled={openMenu} toggle={setOpenMenu} size={25} />
         </div>
       </nav>
     </>

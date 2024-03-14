@@ -83,25 +83,13 @@
   opacity: 1; /* Set the opacity to 1 */
 }
 
-.menu-btn {
-  display: none; /* Hide the menu button by default */
-  width: 2.5rem; /* Set the width of the menu button */
-  height: 2.5rem; /* Set the height of the menu button */
-  font-size: 1.5rem; /* Set the font size of the menu button */
-  align-items: center; /* Center the items vertically */
-  justify-content: center; /* Center the items horizontally */
-  border: none; /* Remove the border from the menu button */
-  border-radius: 0.4rem; /* Add some border radius to the menu button */
-  line-height: 0; /* Set the line height to 0 */
-  cursor: pointer; /* Set the cursor to pointer */
-  transition: all 0.3s ease; /* Add a transition to the items */
-  background: white; /* Set the background color */
-  /*margin-right: 1rem; /* Add some margin to the right */
+.hamburger-react {
+  display: none; /* Hide the hamburger by default */
 }
 
 /* Viewport width is 768px or less */
 @media (max-width: 768px) {
-  .menu-btn {
+  .hamburger-react {
     display: block; /* Show the menu button */
   }
   .navbar-container ul {

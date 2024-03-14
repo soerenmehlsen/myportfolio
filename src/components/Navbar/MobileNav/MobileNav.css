@@ -10,6 +10,7 @@
   background-color: white; /* Set the background color */
   transition: all 0.3s ease; /* Add a transition to the items */
   /*transform: translateX(-100vw); /* Set the transform to translateX(-100%) */
+  display: none; /* Hide the mobile menu by default */
 }
 
 /* The items have to be centeret in the middle of the page*/
@@ -41,6 +42,7 @@
 .mobile-menu.active {
   opacity: 1; /* Set the opacity to 1 */
   transform: translateX(0); /* Set the transform to translateX(0) */
+  display: block; /* Show the mobile menu when it's active */
 }
 
 .mobile-menu ul {
@@ -53,7 +55,10 @@
 
 @media (max-width: 768px) {
   .mobile-menu {
-    display: block; /* Display the mobile items */
+    display: none; /* Display the mobile items */
+  }
+  .mobile-menu.active {
+    display: block; /* Show the mobile menu when it's active */
   }
   .mobile-menu-items {
     display: flex; /* Display the items as a flex container */
