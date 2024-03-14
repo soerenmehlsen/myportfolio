@@ -4,42 +4,66 @@ import "material-symbols";
 import { useState } from "react";
 import MobileNav from "./MobileNav/MobileNav";
 import { Twirl as Hamburger } from "hamburger-react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false); // This is the state that will be used to toggle the mobile menu
+  const [activeLink, setActiveLink] = useState(window.location.pathname); // This is the state that will be used to set the active link (the link that is currently being viewed
 
   return (
     <>
       <MobileNav isOpen={openMenu} toggleMenu={() => setOpenMenu(!openMenu)} />
       <nav className="navbar">
         <div className="navbar-container">
-          <a href="/" className="navbar-logo">
+          <Link to="/" className="navbar-logo">
             Søren Mehlsen <i className="fab fa-typo3"></i>
-          </a>
+          </Link>
           <div className="menu-icon">
             <i className="fas fa-bars"></i>
           </div>
 
           <ul className="nav-menu">
             <li className="nav-item">
-              <a href="/" className="nav-links">
+              <Link
+                to="/"
+                className={`nav-links ${activeLink === "/" ? "active" : ""}`}
+                onClick={() => setActiveLink("/")}
+              >
                 Work
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a href="/Skills" className="nav-links">
+              <Link
+                to="/Skills"
+                className={`nav-links ${
+                  activeLink === "/Skills" ? "active" : ""
+                }`}
+                onClick={() => setActiveLink("/Skills")}
+              >
                 Skills
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a href="/About" className="nav-links">
+              <Link
+                to="/About"
+                className={`nav-links ${
+                  activeLink === "/About" ? "active" : ""
+                }`}
+                onClick={() => setActiveLink("/About")}
+              >
                 About
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a href="/Resume" className="nav-links">
+              <Link
+                to="/Resume"
+                className={`nav-links ${
+                  activeLink === "/Resume" ? "active" : ""
+                }`}
+                onClick={() => setActiveLink("/Resume")}
+              >
                 Resume
-              </a>
+              </Link>
             </li>
           </ul>
           <Hamburger toggled={openMenu} toggle={setOpenMenu} size={25} />

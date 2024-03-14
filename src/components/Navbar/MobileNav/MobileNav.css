@@ -6,7 +6,6 @@
   left: 0; /* Set the left to 0 */
   top: 0; /* Set the top to 0 */
   /*z-index: 999; /* Set the z-index to 999 */
-  opacity: 0%; /* Set the opacity to 0 */
   background-color: white; /* Set the background color */
   transition: all 0.3s ease; /* Add a transition to the items */
   /*transform: translateX(-100vw); /* Set the transform to translateX(-100%) */
@@ -23,7 +22,7 @@
 
 .mobile-menu-items a {
   text-decoration: none; /* Remove the underline from the links */
-  color: #000; /* Set the color of the links */
+  color: rgba(0, 0, 0, 1); /* Set the color of the links */
   font-style: sans-serif; /* Set the font style to sans-serif */
   font-weight: 200; /* Set the font weight of the links */
   opacity: 1; /* Set the opacity to 0.5 */
@@ -39,8 +38,8 @@
   border-bottom: none;
 }
 
-.mobile-menu.active {
-  opacity: 1; /* Set the opacity to 1 */
+.mobile-menu-item.active {
+  color: rgba(0, 0, 0, 0.5);
   transform: translateX(0); /* Set the transform to translateX(0) */
   display: block; /* Show the mobile menu when it's active */
 }

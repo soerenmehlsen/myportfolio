@@ -1,6 +1,7 @@
 import React from "react";
 import { Application } from "@splinetool/runtime";
 import { useEffect } from "react";
+import "./Work.css";
 
 function Work() {
   useEffect(() => {
@@ -12,7 +13,7 @@ function Work() {
     <section className="work-container">
       <div className="work-content">
         <h2>
-          Hi, I'm Soren, a Health-Tech engineering <br />
+          Hi, I'm Soren, a Health-Tech engineer <br />
           with a passion for software development
         </h2>
         <p>Graduated from AU</p>

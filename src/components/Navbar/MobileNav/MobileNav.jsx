@@ -1,7 +1,10 @@
 import React from "react";
 import "./MobileNav.css";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const MobileNav = ({ isOpen, toggleMenu }) => {
+  const [activeLink, setActiveLink] = useState(window.location.pathname); // This is the state that will be used to set the active link (the link that is currently being viewed
   return (
     <>
       <div
@@ -11,24 +14,48 @@ const MobileNav = ({ isOpen, toggleMenu }) => {
         <div>
           <ul className="mobile-menu-items">
             <li className="mobile-menu-item">
-              <a href="/" className="mobile-menu-links">
+              <Link
+                to="/"
+                className={`mobile-menu-item ${
+                  activeLink === "/" ? "active" : ""
+                }`}
+                onClick={() => setActiveLink("/")}
+              >
                 Work
-              </a>
+              </Link>
             </li>
             <li className="mobile-menu-item">
-              <a href="/Skills" className="mobile-menu-links">
+              <Link
+                to="/Skills"
+                className={`mobile-menu-item ${
+                  activeLink === "/Skills" ? "active" : ""
+                }`}
+                onClick={() => setActiveLink("/Skills")}
+              >
                 Skills
-              </a>
+              </Link>
             </li>
             <li className="mobile-menu-item">
-              <a href="/About" className="mobile-menu-links">
+              <Link
+                to="/About"
+                className={`mobile-menu-item ${
+                  activeLink === "/About" ? "active" : ""
+                }`}
+                onClick={() => setActiveLink("/About")}
+              >
                 About
-              </a>
+              </Link>
             </li>
             <li className="mobile-menu-item">
-              <a href="/Resume" className="mobile-menu-links">
+              <Link
+                to="/Resume"
+                className={`mobile-menu-item ${
+                  activeLink === "/Resume" ? "active" : ""
+                }`}
+                onClick={() => setActiveLink("/Resume")}
+              >
                 Resume
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
