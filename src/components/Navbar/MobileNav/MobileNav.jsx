@@ -1,10 +1,14 @@
 import React from "react";
 import "./MobileNav.css";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 const MobileNav = ({ isOpen, toggleMenu }) => {
   const [activeLink, setActiveLink] = useState(window.location.pathname); // This is the state that will be used to set the active link (the link that is currently being viewed
+  const location = useLocation();
+  useEffect(() => {
+    setActiveLink(location.pathname);
+  }, [location]);
   return (
     <>
       <div

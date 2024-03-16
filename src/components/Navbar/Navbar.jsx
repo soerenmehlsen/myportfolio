@@ -1,15 +1,19 @@
 import React from "react";
 import "./Navbar.css";
 import "material-symbols";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import MobileNav from "./MobileNav/MobileNav";
 import { Twirl as Hamburger } from "hamburger-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false); // This is the state that will be used to toggle the mobile menu
   const [activeLink, setActiveLink] = useState(window.location.pathname); // This is the state that will be used to set the active link (the link that is currently being viewed
+  const location = useLocation();
 
+  useEffect(() => {
+    setActiveLink(location.pathname);
+  }, [location]);
   return (
     <>
       <MobileNav isOpen={openMenu} toggleMenu={() => setOpenMenu(!openMenu)} />
