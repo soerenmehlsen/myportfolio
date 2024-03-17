@@ -52,13 +52,13 @@ const MobileNav = ({ isOpen, toggleMenu }) => {
             </li>
             <li className="mobile-menu-item">
               <Link
-                to="/Resume"
+                to="/Contact"
                 className={`mobile-menu-item ${
-                  activeLink === "/Resume" ? "active" : ""
+                  activeLink === "/Contact" ? "active" : ""
                 }`}
-                onClick={() => setActiveLink("/Resume")}
+                onClick={() => setActiveLink("/Contact")}
               >
-                Resume
+                Contact
               </Link>
             </li>
           </ul>

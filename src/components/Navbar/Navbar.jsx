@@ -60,13 +60,13 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <Link
-                to="/Resume"
+                to="/Contact"
                 className={`nav-links ${
-                  activeLink === "/Resume" ? "active" : ""
+                  activeLink === "/Contact" ? "active" : ""
                 }`}
-                onClick={() => setActiveLink("/Resume")}
+                onClick={() => setActiveLink("/Contact")}
               >
-                Resume
+                Contact
               </Link>
             </li>
           </ul>
